@@ -1,0 +1,12 @@
+package com.sitenol.jerseyweb;
+
+	@Path("/helloWorld")
+	public class JerseyHelloWorld {
+		@GET
+		@Produces("application/xml")
+		public Response getMessage() throws JSONException{
+			JSONObject jsonObject= new JSONObject();
+			jsonObject.put("Wemcome Bere");
+			return Response.status(Status.OK).type(MediaType.APPLICATION.JSON).entity_jsonObject.toString()).build();
+		}
+}
